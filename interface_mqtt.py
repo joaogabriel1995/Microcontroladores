@@ -24,13 +24,13 @@ class MQTT():
 
     def ligar(self):
         topic = "luminaria"
-        self.cliente.publish(topic, "0")
+        self.client.publish(topic, "0")
         print("Ligou")
 
 
     def desligar(self):
         topic = "luminaria"
-        self.cliente.publish(topic, "1")
+        self.client.publish(topic, "1")
         print("desligou")
    
 
