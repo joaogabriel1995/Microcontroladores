@@ -105,23 +105,23 @@ class CentralControle(MQTT):
         self.canvas3.place(x=20,y=360, width=100, height=100)
         
     def canvas_1(self):
-        self.canvas1.background = ImageTk.PhotoImage(Image.open("smarthome.png" ))  
+        self.canvas1.background = ImageTk.PhotoImage(Image.open(r".\Imagens\smarthome.png" ))  
         self.canvas1.create_image(395/2,40, image=self.canvas1.background, anchor=CENTER)
         self.canvas1.create_text(395/2,75, text="SMART HOME", font=('Helvetica 10 bold'))
 
     def canvas_2(self):
-        self.canvas2.background = ImageTk.PhotoImage(Image.open("temperatura.png"))
+        self.canvas2.background = ImageTk.PhotoImage(Image.open(r".\Imagens\temperatura.png"))
         self.canvas2.create_image(50,50, image=self.canvas2.background, anchor=CENTER)
 
     def canvas_3(self):
-        self.canvas3.background = ImageTk.PhotoImage(Image.open("umidade.png"))
+        self.canvas3.background = ImageTk.PhotoImage(Image.open(r".\Imagens\umidade.png"))
         self.canvas3.create_image(50,50, image=self.canvas3.background, anchor=CENTER)
 
 
 
     def botao_on(self):
-        self.luz_off = ImageTk.PhotoImage(Image.open("luz on 2.png"))
-        self.luz_on = ImageTk.PhotoImage(Image.open("luz off.png"))
+        self.luz_off = ImageTk.PhotoImage(Image.open(r".\Imagens\luz on 2.png"))
+        self.luz_on = ImageTk.PhotoImage(Image.open(r".\Imagens\luz off.png"))
         self.botao_ligar = Button(self.container_frames,text = 'Ligar', image=self.luz_off, bd=0, compound="top", command=self.interruptor, borderwidth=0, bg="#dcdcdc")
         self.botao_ligar.image = self.luz_off
         self.botao_ligar.place(x=20, y=120, width=100, height=100)
